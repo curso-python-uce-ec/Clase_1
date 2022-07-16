@@ -1,2 +1,2 @@
 # Clase_1
-Jupyter notebooks clase 1
+ESte en un repository por favor sube tus Jupyter notebook de clase 1 aqui
