@@ -1,0 +1,636 @@
+@@ -0,0 +1,635 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Yadira_Basantes_tarea_1.ipynb",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***UNIVERSIDAD CENTRAL DEL ECUADOR***\n",
+        "\n",
+        "**NOMBRE:** Yadira Basantes\n",
+        "\n",
+        "**FECHA :** 22/07/2022"
+      ],
+      "metadata": {
+        "id": "4pPbMhQ0dPY2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***EJERCICIO 1***\n",
+        "\n",
+        "Suponga que tiene una lista [1, 2, 3, 2, 1] y desea crear una nueva lista sin números dobles, después de resolver este problema, intente reescribirla como una sola línea."
+      ],
+      "metadata": {
+        "id": "zZNi-pP_dlVo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## CREAMOS NUESTRA LISTA\n",
+        "lista=[1,2,3,2,1]\n",
+        "print(lista)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QOJqMUqXdxA8",
+        "outputId": "8b442f0e-673c-4c96-9a9f-1e68affd5f88"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 2, 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## ELIMINAMOS VALORES\n",
+        "sd=set(lista)\n",
+        "ml=sorted(sd)\n",
+        "print(ml)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O9wo80I7dzdk",
+        "outputId": "cf123dc7-6d15-4501-a0e6-c8e9d4bd700f"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## RESULTADO\n",
+        "sorted(set(lista))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xToJqqUxd3Yv",
+        "outputId": "392c0a51-68f4-4906-bd53-255fd4b28be2"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***EJERCICIO 2***\n",
+        "\n",
+        "Slicing puede tener 3 parámetros, inicio, final y paso. Sin embargo, a menudo escribirá o leerá operaciones de corte con menos de 3 parámetros. En esta pregunta, debe volver a escribir todos los ejemplos en operaciones de corte con 3 parámetros. Después de haberlas reescrito, verifique si sus respuestas dan los mismos resultados"
+      ],
+      "metadata": {
+        "id": "3F7JdjBEeJkc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string_1 = 'abcde'\n",
+        "print(string_1[1:3])\n",
+        "print(string_1[-3:-2])\n",
+        "\n",
+        "print(string_1[:3])\n",
+        "print(string_1[3:])\n",
+        "print(string_1[:])\n",
+        "\n",
+        "print(string_1[-2:])\n",
+        "print(string_1[:-2])\n",
+        "\n",
+        "print(string_1[::])\n",
+        "print(string_1[::-1])\n",
+        "\n",
+        "print(string_1[:3:1])\n",
+        "print(string_1[:3:-1])\n",
+        "\n",
+        "print(string_1[1::])\n",
+        "print(string_1[:1:-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XH38LPa5ef3H",
+        "outputId": "4d342827-5056-493d-dd4d-1b07ae990cfb"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "bc\n",
+            "c\n",
+            "abc\n",
+            "de\n",
+            "abcde\n",
+            "de\n",
+            "abc\n",
+            "abcde\n",
+            "edcba\n",
+            "abc\n",
+            "e\n",
+            "bcde\n",
+            "edc\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string_1 = 'abcde'\n",
+        "print(string_1[1:3])\n",
+        "print(string_1[-3:-2])\n",
+        "\n",
+        "print(string_1[:3])\n",
+        "print(string_1[3:])\n",
+        "print(string_1[:])\n",
+        "\n",
+        "print(string_1[-2:])\n",
+        "print(string_1[:-2])\n",
+        "\n",
+        "print(string_1[::])\n",
+        "print(string_1[::-1])\n",
+        "\n",
+        "print(string_1[:3:1])\n",
+        "print(string_1[:3:-1])\n",
+        "\n",
+        "print(string_1[1::])\n",
+        "print(string_1[:1:-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "54vxmCr6eibY",
+        "outputId": "d1cde128-13f3-429c-94d5-fd579a481c7b"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "bc\n",
+            "c\n",
+            "abc\n",
+            "de\n",
+            "abcde\n",
+            "de\n",
+            "abc\n",
+            "abcde\n",
+            "edcba\n",
+            "abc\n",
+            "e\n",
+            "bcde\n",
+            "edc\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***EJERCICIO 3***\n",
+        "\n",
+        "Hemos construido un diccionario que se puede usar para encontrar el resultado si dos booleanos están conectados con el operador y\n",
+        "\n",
+        "Reescribe este diccionario para encontrar el resultado si dos booleanos están conectados con el operador\n",
+        "\n",
+        "Python no tiene un operador XOR, busque en Internet lo que se supone que debe hacer el operador XOR y cree un diccionario que proporcione el resultado de una operación XOR"
+      ],
+      "metadata": {
+        "id": "OOgjyHsEelxr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = 50\n",
+        "blood_type = 'A'\n",
+        "my_and = {(True, True): True, (True, False): False, (False, True): False, (False, False): False }\n",
+        "print(my_and[age < 70, blood_type == 'B'])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Iqd6q76aet6T",
+        "outputId": "e0e88e69-d661-439a-fba2-3ed84e0fd2cb"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = 50\n",
+        "blood_type = 'A'\n",
+        "my_and = {(True, True): True, (True, False): True, (False, True): True, (False, False): False }\n",
+        "print(my_and[age < 70,blood_type == 'B'])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MDg_Tz04ezRk",
+        "outputId": "d3dc1d89-1eb4-42e6-e30e-513eddf6ee30"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***EJERCICIO 4***\n",
+        "\n",
+        "En 'Las listas pueden contener listas y así formar tablas de múltiples dimensiones' se les mostro una secuencia ganadora en tres en raya. Como es muy importante para el análisis de datos y la visualización de datos que se sienta cómodo trabajando con tablas poli-dimensionales, le pedimos que reescriba la secuencia con un segundo jugador más inteligente (o un jugador que aprendió el juego de memoria) donde el juego termina en un empate."
+      ],
+      "metadata": {
+        "id": "J_oRdFmbe3wv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tic_tac_toe_board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print() \n",
+        "tic_tac_toe_board[1][1] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print() \n",
+        "tic_tac_toe_board[1][2] = 'O'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "tic_tac_toe_board[0][2] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "tic_tac_toe_board[2][0] = 'O'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "tic_tac_toe_board[0][0] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rtpt4t0Re7jT",
+        "outputId": "3e1bd0ea-6f0d-451c-bb53-0714180b7eae"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[' ', ' ', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', ' ', ' ']\n",
+            "[' ', 'X', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', ' ', ' ']\n",
+            "[' ', 'X', 'O']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', ' ', 'X']\n",
+            "[' ', 'X', 'O']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', ' ', 'X']\n",
+            "[' ', 'X', 'O']\n",
+            "['O', ' ', ' ']\n",
+            "\n",
+            "['X', ' ', 'X']\n",
+            "[' ', 'X', 'O']\n",
+            "['O', ' ', ' ']\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tic_tac_toe_board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print() \n",
+        "\n",
+        "# 1 \n",
+        "\n",
+        "tic_tac_toe_board[0][1] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print() \n",
+        "\n",
+        "# 2\n",
+        "\n",
+        "tic_tac_toe_board[1][1] = 'O'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "\n",
+        "# 3\n",
+        "\n",
+        "tic_tac_toe_board[0][2] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "\n",
+        "# 4\n",
+        "\n",
+        "tic_tac_toe_board[0][0] = 'O'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "\n",
+        "# 5\n",
+        "\n",
+        "tic_tac_toe_board[2][2] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "# 6\n",
+        "\n",
+        "tic_tac_toe_board[1][2] = 'O'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "\n",
+        "# 7\n",
+        "\n",
+        "tic_tac_toe_board[1][0] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "\n",
+        "# 8\n",
+        "\n",
+        "tic_tac_toe_board[2][0] = 'O'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()\n",
+        "\n",
+        "# 9\n",
+        "\n",
+        "tic_tac_toe_board[2][1] = 'X'\n",
+        "print(tic_tac_toe_board[0]) \n",
+        "print(tic_tac_toe_board[1]) \n",
+        "print(tic_tac_toe_board[2])\n",
+        "print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dKjDu18EfHRR",
+        "outputId": "d452ee48-d9fb-4512-ae21-8877a79f54de"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[' ', ' ', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', 'X', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', 'X', ' ']\n",
+            "[' ', 'O', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "[' ', 'X', 'X']\n",
+            "[' ', 'O', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "['O', 'X', 'X']\n",
+            "[' ', 'O', ' ']\n",
+            "[' ', ' ', ' ']\n",
+            "\n",
+            "['O', 'X', 'X']\n",
+            "[' ', 'O', ' ']\n",
+            "[' ', ' ', 'X']\n",
+            "\n",
+            "['O', 'X', 'X']\n",
+            "[' ', 'O', 'O']\n",
+            "[' ', ' ', 'X']\n",
+            "\n",
+            "['O', 'X', 'X']\n",
+            "['X', 'O', 'O']\n",
+            "[' ', ' ', 'X']\n",
+            "\n",
+            "['O', 'X', 'X']\n",
+            "['X', 'O', 'O']\n",
+            "['O', ' ', 'X']\n",
+            "\n",
+            "['O', 'X', 'X']\n",
+            "['X', 'O', 'O']\n",
+            "['O', 'X', 'X']\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***EJERCICIO 5***\n",
+        "\n",
+        "Ejecute el siguiente programa, vea si puede encontrar algo extraño y explique el resultado usando su conocimiento de recolección de basura."
+      ],
+      "metadata": {
+        "id": "FSj9UrDWfaNH"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_5 = [1, 2, 3]\n",
+        "print(f\"The value of the list refered to by list_5 is {list_5} and its address is {id(list_5)}\")\n",
+        "list_5 = [1 , 1, 3]\n",
+        "print(f\"The value of the list refered to by list_5 is {list_5} and its address is {id(list_5)}\")\n",
+        "list_5 = [1, 1, 4]\n",
+        "print(f\"The value of the list refered to by list_5 is {list_5} and its address is {id(list_5)}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mjxUXmA7fgeo",
+        "outputId": "12977b0d-5564-4650-92e5-44d8f0551595"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The value of the list refered to by list_5 is [1, 2, 3] and its address is 139870610156352\n",
+            "The value of the list refered to by list_5 is [1, 1, 3] and its address is 139870575688672\n",
+            "The value of the list refered to by list_5 is [1, 1, 4] and its address is 139870610156352\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "***EJERCICIO 6***\n",
+        "\n",
+        "Las cadenas son inmutables, pero ¿por qué funciona lo siguiente? ¿Claramente cambiamos el valor de la cadena llamada string_1? ¿Qué afirmaciones agregaría para aclarar lo que ha sucedido? usar id\n"
+      ],
+      "metadata": {
+        "id": "t7wzDT-afrbe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string_1 = \"texto 1\"\n",
+        "print(string_1)\n",
+        "string_1 = \"texto 2\"\n",
+        "print(string_1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4pMQj09cfwRD",
+        "outputId": "bbc25daf-2499-465b-8579-ebbb54c1a751"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "texto 1\n",
+            "texto 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string_1 = \"texto 1\"\n",
+        "print(id(string_1))\n",
+        "string_1 = \"texto 2\"\n",
+        "print(id(string_1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g6nR56P7hJ8r",
+        "outputId": "ad7f4c06-672d-47df-ac5d-649f5bda407b"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "139870575554096\n",
+            "139870575553584\n"
+          ]
+        }
+      ]
+    }
+  ]
+} 
